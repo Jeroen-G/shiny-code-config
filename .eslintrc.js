@@ -25,6 +25,7 @@ module.exports = {
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
+        project: './tsconfig.json',
     },
     rules: {
         // Enforce consistent indentation. https://eslint.org/docs/latest/rules/indent
@@ -50,6 +51,7 @@ module.exports = {
             'error',
             {
                 bracketSpacing: true,
+                bracketSameLine: true,
                 singleQuote: true,
                 arrowParens: 'avoid',
                 trailingComma: 'es5',
