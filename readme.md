@@ -25,7 +25,7 @@ If you want to override or extend any rules, add the `rules: {}` beneath the ext
 If you want to use it in a React Native project, use the RN specific config to extend:
 
 ```json
-  "extends": ["shiny-code/react-native"]
+"extends": ["shiny-code/react-native"]
 ```
 
 3. Bonus: enable automatic eslint running in the IDE for the project.
