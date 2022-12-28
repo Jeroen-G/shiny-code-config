@@ -1,0 +1,44 @@
+{
+  "name": "eslint-config-shiny-code",
+  "version": "1.0.0",
+  "description": "Shiny code with this ESLint and Prettier config",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "eslint",
+    "prettier",
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "repository": "git@github.com:Jeroen-G/shiny-code-config.git",
+  "author": "Jeroen",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./.eslintrc.js"
+    ]
+  },
+  "dependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  }
+}
