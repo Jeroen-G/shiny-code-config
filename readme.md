@@ -28,4 +28,5 @@ If you want to use it in a React Native project, use the RN specific config to e
 "extends": ["shiny-code/react-native"]
 ```
 
-3. Bonus: enable automatic eslint running in the IDE for the project.
+3. Add a tsconfig.json, this can be copied from this repository or just be an empty `{}` object.
+4. Bonus: enable automatic eslint running in the IDE for the project.
