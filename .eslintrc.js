@@ -49,6 +49,30 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'warn',
         // Find and remove unused es6 module imports. https://github.com/sweepline/eslint-plugin-unused-imports
         'unused-imports/no-unused-imports': 'error',
+        // Ensure all imports appear before other statements. https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md
+        'import/first': 'error',
+        // Enforce a newline after import statements. https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
+        'import/newline-after-import': 'error',
+        // Enforce a convention in the order of imports. https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index',
+                    'object',
+                ],
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: true,
+                },
+                'newlines-between': 'always',
+            },
+        ],
         // Prettier config. https://prettier.io/docs/en/options.html
         'prettier/prettier': [
             'error',
