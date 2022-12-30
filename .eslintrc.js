@@ -8,7 +8,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended', // https://typescript-eslint.io
         'plugin:@next/next/recommended', // https://nextjs.org/docs/basic-features/eslint
     ],
-    plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks', 'unused-imports'],
+    plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks', 'unused-imports', 'import'],
     env: {
         browser: true,
         node: true,
