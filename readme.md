@@ -22,11 +22,22 @@ npm install eslint-config-shiny-code
 
 If you want to override or extend any rules, add the `rules: {}` beneath the extends in your Eslint config.
 
-If you want to use it in a React Native project, use the RN specific config to extend:
+3. Add a tsconfig.json, this can be copied from this repository or just be an empty `{}` object.
+4. Bonus: enable automatic eslint running in the IDE for the project.
 
+## Specific configs
+
+### React
+```json
+"extends": ["shiny-code/react"]
+```
+
+### NextJS
+```json
+"extends": ["shiny-code/react-nextjs"]
+```
+
+### React Native
 ```json
 "extends": ["shiny-code/react-native"]
 ```
-
-3. Add a tsconfig.json, this can be copied from this repository or just be an empty `{}` object.
-4. Bonus: enable automatic eslint running in the IDE for the project.

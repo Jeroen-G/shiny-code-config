@@ -4,20 +4,13 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
     extends: [
         'eslint:recommended', // https://eslint.org/docs/latest/rules/
-        'plugin:react/recommended', // https://github.com/jsx-eslint/eslint-plugin-react
         'plugin:@typescript-eslint/recommended', // https://typescript-eslint.io
-        'plugin:@next/next/recommended', // https://nextjs.org/docs/basic-features/eslint
     ],
-    plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks', 'unused-imports', 'import'],
+    plugins: ['@typescript-eslint', 'prettier', 'unused-imports', 'import'],
     env: {
         browser: true,
         node: true,
         jest: true,
-    },
-    settings: {
-        react: {
-            version: 'detect',
-        },
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -39,14 +32,6 @@ module.exports = {
         semi: ['error', 'always'],
         // Allows `@ts-` comments. https://typescript-eslint.io/rules/ban-ts-comment/
         '@typescript-eslint/ban-ts-comment': 'off',
-        // Disallow unnecessary JSX expressions when literals alone are sufficient. https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
-        'react/jsx-curly-brace-presence': ['error', { props: "never", children: "never", "propElementValues": "always" }],
-        // Ensure destructuring and symmetric naming of useState hook value and setter variables. https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/hook-use-state.md
-        'react/hook-use-state': 'error',
-        // Checks rules of Hooks. https://reactjs.org/docs/hooks-rules.html
-        'react-hooks/rules-of-hooks': 'error',
-        // Checks useEffect dependencies. https://reactjs.org/docs/hooks-rules.html
-        'react-hooks/exhaustive-deps': 'warn',
         // Find and remove unused es6 module imports. https://github.com/sweepline/eslint-plugin-unused-imports
         'unused-imports/no-unused-imports': 'error',
         // Ensure all imports appear before other statements. https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md
