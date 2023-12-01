@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-shiny-code",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Shiny code with this ESLint and Prettier config",
   "keywords": [
     "javascript",
@@ -25,7 +25,8 @@
   "peerDependencies": {
     "eslint": "^8.0",
     "prettier": "^3.1.0",
-    "typescript": "^5.2.0"
+    "typescript": "^5.2.0",
+    "react-native" : "*"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.0.3",
