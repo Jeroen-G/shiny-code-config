@@ -1,4 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const eslintrc = require('./.eslintrc');
+import { javascript, typescript } from './base.js';
+import { reactNativeSetup } from './react-native.js';
+import { reactSetup } from './react.js';
 
-module.exports = eslintrc;
+export default {
+    configs: {
+        js: javascript,
+        ts: typescript,
+        react: reactSetup,
+        reactNative: reactNativeSetup,
+    },
+};

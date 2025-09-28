@@ -1,25 +1,19 @@
-// This is a patch so that eslint will load the plugins as dependencies.
-require('@rushstack/eslint-patch/modern-module-resolution');
+import eslint from '@eslint/js';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
+import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import unusedImports from 'eslint-plugin-unused-imports';
+import tsEslint from 'typescript-eslint';
 
-module.exports = {
+export const javascript = {
     extends: [
-        'eslint:recommended', // https://eslint.org/docs/latest/rules/
-        'plugin:@typescript-eslint/recommended', // https://typescript-eslint.io
+        eslint.configs.recommended,
+        importPlugin.flatConfigs.recommended,
+        prettierRecommended,
     ],
-    plugins: ['@typescript-eslint', 'prettier', 'unused-imports', 'import'],
-    env: {
-        browser: true,
-        node: true,
-        jest: true,
-    },
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: './tsconfig.json',
+    plugins: {
+        'unused-imports': unusedImports,
     },
     rules: {
         // Enforce consistent indentation. https://eslint.org/docs/latest/rules/indent
@@ -63,5 +57,38 @@ module.exports = {
                 printWidth: 100,
             },
         ],
+        // Slightly opinionated syntax preferences
+        'no-restricted-syntax': [
+            'error',
+            {
+                selector: 'Property[method=true]',
+                message:
+                    'Use arrow function properties (e.g., reset: () => {}) instead of method shorthand (reset() {}).',
+            },
+        ],
+    },
+};
+
+export const typescript = {
+    ...javascript,
+    extends: [
+        ...javascript.extends,
+        tsEslint.configs.recommended,
+        importPlugin.flatConfigs.typescript,
+    ],
+    plugins: {
+        ...javascript.plugins,
+        '@typescript-eslint': tsPlugin,
+    },
+    languageOptions: {
+        parser: tsParser,
+        parserOptions: {
+            ecmaFeatures: {
+                jsx: true,
+            },
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+            project: './tsconfig.json',
+        },
     },
 };
