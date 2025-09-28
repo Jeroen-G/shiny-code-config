@@ -7,9 +7,9 @@ import { typescript } from './base.js';
 export const reactSetup = {
     ...typescript,
     extends: [
-        ...typescript.extends,
         reactPlugin.configs.flat.recommended, // https://github.com/jsx-eslint/eslint-plugin-react
         reactPlugin.configs.flat['jsx-runtime'], // https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports
+        ...typescript.extends,
     ],
     languageOptions: {
         ...typescript.languageOptions,

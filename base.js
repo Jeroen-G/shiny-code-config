@@ -80,6 +80,11 @@ export const typescript = {
         ...javascript.plugins,
         '@typescript-eslint': tsPlugin,
     },
+    settings: {
+        'import/resolver': {
+            typescript: {},
+        },
+    },
     languageOptions: {
         parser: tsParser,
         parserOptions: {
