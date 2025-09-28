@@ -12,8 +12,8 @@ export const reactNativeSetup = {
         },
     },
     plugins: {
-        ...reactSetup.plugins,
         'react-native': reactNativePlugin,
+        ...reactSetup.plugins,
     },
     rules: {
         ...reactSetup.rules,
