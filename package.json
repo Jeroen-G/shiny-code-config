@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-shiny-code",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "description": "Shiny code with this ESLint and Prettier config",
   "keywords": [
