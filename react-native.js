@@ -24,7 +24,7 @@ export const reactNativeSetup = {
         // No style arrays that have 1 element only <View style={[{height: 10}]}/>.
         'react-native/no-single-element-style-arrays': 'error',
         // Detect raw text outside of Text component.
-        'react-native/no-raw-text': 'error',
+        'react-native/no-raw-text': 'warn',
         // Workaround for the bug where linting reports `Parse errors in imported module 'react-native': parser.parse is not a function`
         'import/namespace': 'off',
     },
