@@ -1,16 +1,15 @@
 {
-  "include": ["./**/*"],
-  "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-  },
-  "exclude": [
-    "node_modules",
-    "out",
-  ]
+    "include": ["./**/*"],
+    "compilerOptions": {
+        "module": "preserve",
+        "target": "es2025",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "skipLibCheck": true,
+        "jsx": "react-jsx"
+    },
+    "exclude": [
+        "node_modules",
+        "out"
+    ]
 }
