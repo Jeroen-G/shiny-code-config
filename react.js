@@ -14,6 +14,13 @@ export const reactSetup = {
   languageOptions: {
     ...typescript.languageOptions,
     ...reactPlugin.configs.flat.recommended.languageOptions,
+    // Merge instead of replace: the react preset only sets `ecmaFeatures.jsx`,
+    // and replacing would drop the TypeScript `projectService` that the
+    // type-checked rules need.
+    parserOptions: {
+      ...typescript.languageOptions.parserOptions,
+      ...reactPlugin.configs.flat.recommended.languageOptions.parserOptions,
+    },
     globals: {
       ...globals.browser,
       ...globals.node,
