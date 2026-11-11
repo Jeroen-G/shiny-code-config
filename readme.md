@@ -26,7 +26,7 @@ import shinyConfig from "eslint-config-shiny-code";
 
 export default defineConfig([
     {
-        ...shinyConfig.configs.base,
+        ...shinyConfig.configs.ts,
         files: ["src/**/*.{ts,js,tsx}"],
         ignores: ['node_modules'],
     }
@@ -34,10 +34,11 @@ export default defineConfig([
 
 ```
 
+Available configs: `js` (JavaScript only), `ts` (TypeScript), `react` and `reactNative`.
 If you want to override or extend any rules, add a new entry to the array.
 
-3. Add a tsconfig.json, this can be copied from this repository or just be an empty `{}` object.
-4. Bonus: enable automatic eslint running in the IDE for the project.
+4. Add a tsconfig.json, this can be copied from this repository or just be an empty `{}` object.
+5. Bonus: enable automatic eslint running in the IDE for the project.
 
 ## Specific configs
 
