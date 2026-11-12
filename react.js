@@ -14,6 +14,10 @@ export const reactSetup = {
   languageOptions: {
     ...typescript.languageOptions,
     ...reactPlugin.configs.flat.recommended.languageOptions,
+    parserOptions: {
+      ...typescript.languageOptions.parserOptions,
+      ...reactPlugin.configs.flat.recommended.languageOptions.parserOptions,
+    },
     globals: {
       ...globals.browser,
       ...globals.node,
