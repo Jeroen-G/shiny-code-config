@@ -4,7 +4,19 @@ My [sharable settings](https://eslint.org/docs/latest/developer-guide/shareable-
 
 Version 2 of this package uses ESLint 9 and its new flat config.
 
-## Installation
+## Quick start
+
+Run this in your project root:
+```
+npx eslint-config-shiny-code init
+```
+
+It detects the project type (`react-native`/`expo` → React Native, `react` → React, `typescript` or a tsconfig → TypeScript, otherwise JavaScript), writes `eslint.config.js` (or `.mjs`) and `tsconfig.json`, adds `lint`/`fix` scripts, and prints the packages you still need to install.
+Existing files are never overwritten unless you pass `--force`. Use `--type <js|ts|react|react-native>` to skip detection and `--dry-run` to preview.
+
+Verify the setup with `npm run lint`.
+
+## Manual installation
 
 1. Install the package
 ```

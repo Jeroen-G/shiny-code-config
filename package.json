@@ -11,12 +11,16 @@
     "eslint-config"
   ],
   "main": "index.js",
+  "bin": {
+    "eslint-config-shiny-code": "bin/init.js"
+  },
   "repository": "git@github.com:Jeroen-G/shiny-code-config.git",
   "author": "Jeroen",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
+    "test": "node --test test/*.test.js"
   },
   "peerDependencies": {
     "eslint": ">= 9",
